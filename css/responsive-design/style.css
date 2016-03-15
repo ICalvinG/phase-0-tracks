@@ -33,6 +33,7 @@ figcaption {
 
 body {
   min-width: 960px;
+  text-align: center;
 }
 
 .external-links {
@@ -49,5 +50,21 @@ body {
 @media screen and (max-width: 500px) {
   body {
     background-color: hotpink;
+    font-size: 10px;
   }
+}
+
+@media only screen and (max-width: 500px) { 
+   .image1{
+     display: none;
+   }
+   .image2{
+     display: block;
+   }
+}
+
+#page-wrap {
+  text-align: left;
+  width: 800px;
+  margin: 0 auto;
 }
