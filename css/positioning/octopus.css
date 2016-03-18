@@ -1,6 +1,13 @@
 #octopus {
 	position: absolute;
 	z-index: 1;
-	margin-top: 5em;
+	margin-top: 11em;
+	margin-left: 5em;
+}
+
+#hat {
+	position: absolute;
+	z-index: 2;
+	margin-top: 10em;
 	margin-left: 5em;
 }
