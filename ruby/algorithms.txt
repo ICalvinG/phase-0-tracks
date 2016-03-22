@@ -1,0 +1,68 @@
+Release 0
+- Press button for elevator
+- Wait for elevator to arrive
+- Wait for elevator doors to open
+- Walk forward into elevator until past doors
+- Stop
+- Turn left
+- Turn left
+- Face the keypad
+- Press floor level button number 10
+- Press close door button
+
+Release 1 : Brushing Teeth
+- Gather toothbrush, toothpaste, and a cup
+- Walk to bathroom sink
+- Turn on the water
+- Pick up cup
+- Place cup under running water
+- Fill cup with water until full
+- Turn off the water
+- Put down cup
+- Turn on the water
+- Pick up toothbrush
+- Place toothbrush under running water
+- Stay until toothbrush is fully wet
+- Turn off the water
+- Place toothbrush down
+- Pick up toothpaste
+- Take toothpaste cap off
+- Pick up toothbrush with other hand
+- Place mouth of toothpaste on the head of the toothbrush
+- Squeeze until head of toothbrush is full
+- Place toothpaste down
+- Pick up cup with empty hand
+- Bring cup up to mouth
+- Take a sip of water but keep water in mouth
+- Gargle water and spit out
+- Put down cup
+- Bring toothbrush up to mouth
+- Open mouth
+- Place head of toothbrush on bottom row of teeth
+- Brush back and forth for 30 seconds
+- Spit out toothpaste foam
+- Place head of toothbrush on top row of teeth
+- Brush back and forth for 30 seconds
+- Spit out toothpaste foam
+- Place head of tooth brush on bottom row of teeth
+- Brush back and forth for 30 seconds
+- Spit out toothpaste foam
+- Place head of toothbrush on top row of teeth
+- Brush back and forth for 30 seconds
+- Spit out toothpaste foam
+- Take toothbrush out of mouth 
+- Turn on the water
+- Place toothbrush under running water
+- Stay until toothbrush is fully clean
+- Turn off the water
+- Place down the toothbrush
+- Pick up the cup
+- Bring cup up to mouth
+- Take a sip of water but keep water in mouth
+- Gargle and spit out
+- Spill rest of water in cup until empty
+- Put down cup
+- Pick up toothpaste and toothpaste cap
+- Close the toothpaste
+- Pick up toothbrush and cup
+- Over
