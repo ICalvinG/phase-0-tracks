@@ -1,0 +1,44 @@
+header {
+    /* position: fixed; */
+    background-color: blue;
+    margin: 10px;
+    padding: 10px;
+    color: white;
+}
+.column-1 {
+    float: left;
+    display: table-cell;
+    background-color: red;
+    margin: 10px;
+    width: 45%;
+    padding: 10px;
+}
+.column-2 {
+    float: right;
+    display: table-cell;
+    background-color: white;
+    margin: 10px;
+    width: 45%;
+    padding: 10px;
+    background-color: yellow;
+}
+footer {
+    background-color: green;
+    clear: both;
+}
+body {
+    font-family: Helvetica;
+}
+img {
+    width: 50%;
+    margin-left: 250px;
+}
+a:hover {
+    color: yellow;
+}
+.column-1 h2 {
+    color: pink;
+}
+header, footer {
+    border: 10px solid red;
+}
