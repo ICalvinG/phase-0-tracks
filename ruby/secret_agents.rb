@@ -4,7 +4,8 @@
  else
    return (str.ord+1).chr
  end
-end#Encrypt Method with Change Method to account for Z-Adef encrypt(str="")  index = 0  
+end
+#Encrypt Method with Change Method to account for Z-Adef encrypt(str="")  index = 0  
  
  while index < str.length
    str[index] = shiftForward(str[index])
@@ -17,7 +18,9 @@ end#Encrypt Method with Change Method to account for Z-Adef encrypt(str="")  ind
  else
    return (str.ord-1).chr
  end
-enddef decrypt(str="")  index = 0  
+end
+
+def decrypt(str="")  index = 0  
  
  while index < str.length
    str[index] = shift(str[index])
