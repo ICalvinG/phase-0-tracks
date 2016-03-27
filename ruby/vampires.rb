@@ -16,7 +16,7 @@ elsif age == year && garlic == "Y" || health == "Y"
 	puts "Probably not a vampire"
 elsif age != year && garlic == "N" || health == "N"
 	puts "Probably a vampire"
-elsif age != year && (garlic == "Y" && health == "Y")
+elsif age != year && (garlic == "N" && health == "N")
 	puts "Almost certainly a vampire."
 else
 	puts "Results inconclusive"
