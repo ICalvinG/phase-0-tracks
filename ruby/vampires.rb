@@ -26,5 +26,6 @@ elsif age != year && (garlic == "N" && health == "N")
 else
 	puts "Results inconclusive"
 end
+employees += 1
 end 
 puts "Everyone has completed their survey!"
