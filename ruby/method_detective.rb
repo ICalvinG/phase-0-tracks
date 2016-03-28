@@ -30,12 +30,12 @@ puts "The case of the disappearing last letter".chop
 puts "The mystery of the missing first letter".slice!(1..38)
 # => “he mystery of the missing first letter”
 
-# “Elementary  ,    my   dear      Watson!”.<???>""
+puts "Elementary,    my   dear      Watson!".squeeze
 # => “Elementary, my dear Watson!”
 
-#“z”.<???>
+puts "z".bytes
 # => 122 
 # (What is the significance of the number 122 in relation to the character z?)
 
-#“How many times does the letter ‘a’ appear in this string?”.<???>
+puts "How many times does the letter ‘a’ appear in this string?".count("a")
 #=> 4
