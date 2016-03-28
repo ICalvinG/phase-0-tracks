@@ -12,7 +12,8 @@ insert = "zom".insert(2, "o")
 puts insert
 # => “zoom”
 
-#“enhance”.rjust(10)
+puts "\tenhance\t"
+puts "enhance".center(10)
 #=> “    enhance    ”
 
 # “Stop! You’re under arrest!”.<???>
