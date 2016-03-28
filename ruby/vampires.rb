@@ -1,4 +1,4 @@
-puts "How many employees will be processed"
+puts "How many employees will be processed?"
 amount = gets.chomp.to_i
 
 employees = 0
@@ -15,6 +15,16 @@ until employees == amount
 	garlic = gets.chomp.capitalize
 	puts "Would you like to enroll in the company's health insurance? (Y/N)"
 	health = gets.chomp.capitalize
+	puts "Name any allergies you may have one at a time. Type in done when finished"
+	loop do
+		allergies = gets.chomp.capitalize
+		if allergies == "Done"
+			break
+			puts "Thank You!"
+		elsif allergies == "Sunshine"
+			puts "Probably a vampire"
+		end
+	end
 
 if name == "Drake Cula" || name == "Tu Fang"
 	puts "Definitely a vampire"
