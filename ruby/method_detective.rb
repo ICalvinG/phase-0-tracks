@@ -12,11 +12,10 @@ insert = "zom".insert(2, "o")
 puts insert
 # => “zoom”
 
-puts "\tenhance\t"
-puts "enhance".center(10)
+puts "enhance".center(20)
 #=> “    enhance    ”
 
-# “Stop! You’re under arrest!”.<???>
+puts "Stop! You’re under arrest!".upcase
 # => “STOP! YOU’RE UNDER ARREST!”
 
 # “the usual”.<???>
