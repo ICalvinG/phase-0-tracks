@@ -22,8 +22,8 @@ until employees == amount
 			break
 			puts "Thank You!"
 		elsif allergies == "Sunshine"
-			break
 			puts "Probably a vampire"
+			break
 		end
 	end
 
