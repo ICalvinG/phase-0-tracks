@@ -25,11 +25,11 @@ client[:budget] = budget
 puts "Would you like to review or update #{name}'s information? Type in none if everything is alright."
 answer = gets.chomp.downcase
 if answer == "review"
-	puts "Name = client[:name]"
-	puts "Age = client[:age]"
-	puts "Children = client[:children]"
-	puts "Decor Theme = client[:decor_theme]"
-	puts "Budget = client[:budget]"
+	puts client[:name]
+	puts client[:age]
+	puts client[:children]
+	puts client[:decor_theme]
+	puts client[:budget]
 elsif answer == "update"
 	puts "What information would you like to update?"
 	update = gets.chomp.downcase
