@@ -25,10 +25,12 @@ client[:budget] = budget
 puts "Would you like to review or update #{name}'s information? Type in none if everything is alright."
 answer = gets.chomp.downcase
 if answer == "review"
+	#Add in option to change information after reviewing.
 	puts client.inspect
 	puts "Is there anything you would like to change? (Yes/No)"
 	change = gets.chomp.downcase
 	if change == "yes"
+		#Add in option on what information would like to be changed.
 		puts "What information would you like to change?"
 	    result = gets.chomp.downcase
 	    if result == "name"
@@ -52,12 +54,14 @@ if answer == "review"
 	    	budget = gets.chomp.to_i
 	    	client[:budget] = budget
 	    end
+	    #Add in code to let user know the information has been updated.
 	    puts client.inspect
 	    puts "Your changes have been updated."
 	elsif change == "no"
 		puts "Everything is alright!"
 	end
 elsif answer == "update"
+	#Add in option on what information would like to be changed.
 	puts "What information would you like to update?"
 	update = gets.chomp.downcase
 	if update == "name"
@@ -81,6 +85,7 @@ elsif answer == "update"
 		budget = gets.chomp.to_i
 		client[:budget] = budget
 	end
+	#Add in code to let user know the information has been updated.
 	puts client.inspect
 	puts "Your changes have been updated."
 elsif answer == "none"
