@@ -22,7 +22,7 @@ client[:children] = children
 client[:decor_theme] = decor_theme
 client[:budget] = budget
 #Print back the information to the user with choice of updating.
-puts "Would you like to review or update #{name}'s information?"
+puts "Would you like to review or update #{name}'s information? Type in none if everything is alright."
 answer = gets.chomp.downcase
 if answer == "review"
 	puts client[:name]
@@ -54,4 +54,6 @@ elsif answer == "update"
 		budget = gets.chomp.to_i
 		client[:budget] = budget
 	end
+elsif answer == "none"
+	puts "Everything is alright!"
 end
