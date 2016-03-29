@@ -2,7 +2,7 @@
 client = {}
 #Enter the name of the client.
 puts "What is the name of your client?"
-name = gets.chomp.to_sym
+name = gets.chomp.to_sym.capitalize
 #Enter the age of the client.
 puts "How old is #{name}?"
 age = gets.chomp.to_i
