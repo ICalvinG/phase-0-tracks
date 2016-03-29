@@ -45,7 +45,7 @@ elsif answer == "update"
 		puts "How many children does the client have?"
 		children = gets.chomp.to_i
 		client[:children] = children
-	elsif update == "decor theme" || "decor"
+	elsif update == "decor theme" || update == "decor"
 		puts "What decor theme would the client like?"
 		decor_theme = gets.chomp.to_sym
 		client[:decor_theme] = decor_theme
