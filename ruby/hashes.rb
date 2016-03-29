@@ -52,6 +52,8 @@ if answer == "review"
 	    	budget = gets.chomp.to_i
 	    	client[:budget] = budget
 	    end
+	    puts client.inspect
+	    puts "Your changes have been updated."
 	elsif change == "no"
 		puts "Everything is alright!"
 	end
@@ -79,6 +81,8 @@ elsif answer == "update"
 		budget = gets.chomp.to_i
 		client[:budget] = budget
 	end
+	puts client.inspect
+	puts "Your changes have been updated."
 elsif answer == "none"
 	puts "Everything is alright!"
 end
