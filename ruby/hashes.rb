@@ -25,11 +25,36 @@ client[:budget] = budget
 puts "Would you like to review or update #{name}'s information? Type in none if everything is alright."
 answer = gets.chomp.downcase
 if answer == "review"
-	puts client[:name]
-	puts client[:age]
-	puts client[:children]
-	puts client[:decor_theme]
-	puts client[:budget]
+	puts client.inspect
+	puts "Is there anything you would like to change? (Yes/No)"
+	change = gets.chomp.downcase
+	if change == "yes"
+		puts "What information would you like to change?"
+	    result = gets.chomp.downcase
+	    if result == "name"
+	    	puts "What is client's new name?"
+	    	name = gets.chomp.to_sym
+	    	client[:name] = name
+	    elsif result == "age"
+	    	puts "What is #{name}'s age?"
+	    	age = gets.chomp.to_i
+	    	client[:age] = age
+	    elsif result == "children"
+	    	puts "How many children does #{name} have?"
+	    	children = gets.chomp.to_i
+	    	client[:children] = children
+	    elsif result == "decor theme" || result == "decor"
+	    	puts "What decor theme would #{name} like?"
+	    	decor_theme = gets.chomp.to_sym
+	    	client[:decor_theme] = decor_theme
+	    elsif result == "budget"
+	    	puts "What is #{name}'s new budget?"
+	    	budget = gets.chomp.to_i
+	    	client[:budget] = budget
+	    end
+	elsif change == "no"
+		puts "Everything is alright!"
+	end
 elsif answer == "update"
 	puts "What information would you like to update?"
 	update = gets.chomp.downcase
