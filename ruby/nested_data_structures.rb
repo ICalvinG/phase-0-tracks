@@ -1,7 +1,7 @@
 movie_theater = {
 	morning: {
 		movie_name: "Zootopia",
-		seat_info: {
+		seat: {
 			total: 30,
 			available: 2
 			},
@@ -13,7 +13,7 @@ movie_theater = {
 	},
 	afternoon: {
 		movie_name: "10 Cloverfield Lane",
-		seat_info: {
+		seat: {
 			total: 30,
 			available: 1
 			},
@@ -25,7 +25,7 @@ movie_theater = {
 	},
 	evening: {
 		movie_name: "Batman vs. Superman",
-		seat_info: {
+		seat: {
 			total: 30,
 			available: 0
 		},
@@ -37,8 +37,8 @@ movie_theater = {
 	}
 }
 
-movie_theater[:morning][:movie_name]
-movie_theater[:morning][:food_option][2]
-movie_theater[:afternoon][:food_option][1]
-movie_theater[:evening][:seat_info][:available]
-movie_theater[:evening][:food_option]
+p movie_theater[:morning][:movie_name]
+p movie_theater[:morning][:food_option][2]
+p movie_theater[:afternoon][:food_option][1]
+p movie_theater[:evening][:seat][:available]
+p movie_theater[:evening][:food_option]
