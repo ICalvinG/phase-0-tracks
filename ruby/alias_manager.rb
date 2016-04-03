@@ -5,7 +5,8 @@ name = gets.chomp
 #Swap the first and last name
 def swap(name)
 	name.split.reverse.join(' ')
-	p name
 end
 #Change all the vowels to the next vowel 
 #Change all of the consonants into the next consonant
+
+p swap(name)
