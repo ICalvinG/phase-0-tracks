@@ -3,10 +3,11 @@ puts "What is your first name and last name?"
 #Store spy's name into variable
 name = gets.chomp
 #Swap the first and last name
-def swap(name)
+def secret(name)
 	name.split.reverse.join(' ')
+	#Change all the vowels to the next vowel
+	name.gsub!(/[aeiou]/, 'a' => 'e', 'e' => 'i', 'i' => 'o', 'o' => 'u', 'u' => 'a')
 end
-#Change all the vowels to the next vowel 
 #Change all of the consonants into the next consonant
 
-p swap(name)
+p secret(name)
