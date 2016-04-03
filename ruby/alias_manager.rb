@@ -19,5 +19,8 @@ loop do
 	end
 end
 
-secret_identities[name] = secret(name)
-p secret_identities
+secret_identities.each do |key, value|
+	puts "#{secret(name)} is actually #{name}!"
+end
+
+puts "#{secret(name)} is actually #{name}!"
