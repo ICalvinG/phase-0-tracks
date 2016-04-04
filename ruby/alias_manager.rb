@@ -11,6 +11,8 @@ puts "What is your first name and last name? Type Quit to end."
 #Store spy's name into variable and create loop
 loop do
 	name = gets.chomp
+	secret(name) = secret
+	secret_identities[name] = secret
 	if name.capitalize == "Quit"
 		puts "Good Luck!"
 		break
@@ -19,8 +21,4 @@ loop do
 	end
 end
 
-secret_identities.each do |key, value|
-	puts "#{secret(name)} is actually #{name}!"
-end
-
-puts "#{secret(name)} is actually #{name}!"
+secret_identities.each { |name, secret| puts "#{secret} is actually #{name}!" }
