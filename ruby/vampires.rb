@@ -10,7 +10,7 @@ until employees == amount
 	age = gets.chomp.to_i
 	puts "What year were you born?"
 	year = gets.chomp.to_i
-	year = (2016 - year)
+	year = (Time.new.year - year)
 	puts "Our company cafeteria serves garlic bread. Should we order some for you? (Y/N)"
 	garlic = gets.chomp.capitalize
 	puts "Would you like to enroll in the company's health insurance? (Y/N)"
