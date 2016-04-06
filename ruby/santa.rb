@@ -1,9 +1,7 @@
 class Santa
-	age = 0
 	def initialize(gender, ethnicity)
 		@gender = gender
 		@ethnicity = ethnicity
-		@reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		puts "Initializing Santa instance..."
 	end
 	def speak
@@ -12,12 +10,20 @@ class Santa
 	def eat_milk_and_cookies(cookie)
 		puts "That was a good #{cookie}!"
 	end
+	def reindeer_ranking
+		reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+	end
+	def age
+		@age = 0
+		celebrate_birthday
+	end
 	def celebrate_birthday
-		@age += 1
+		if @age == 0
+			@age = @age +1
+		end
 	end
-	def get_mad_at(reindeer_name)
-		@reindeer_ranking = reindeer_name.rotate(-1)
-	end
+	def get_mad_at(reindeer)
+		reindeer.
 end
 
 claus = Santa.new("male", "asian")
@@ -30,5 +36,3 @@ example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer n
 example_genders.length.times do |i|
   santas << Santa.new(example_genders[i], example_ethnicities[i])
 end
-
-p santas
