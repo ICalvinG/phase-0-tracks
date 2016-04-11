@@ -46,7 +46,7 @@ until answer == "N"
 	elsif answer == "Y"
 		turtle = Turtle.new(@name, @age, @color)
 		puts "What would you like to name your Turtle?"
-		name = gets.chomp.to_sym
+		name = gets.chomp.capitalize
 		@name = name
 		puts "How old would you like your Turtle to be?"
 		age = gets.chomp.to_i
