@@ -1,13 +1,17 @@
 #Create a class for Turtle.
 class Turtle
-	attr_reader :color
-	attr_accessor :name, :age 
+	attr_reader :size
+	attr_accessor :name, :age, :color 
 #Give Turtle three attributes.
-	def initialize(name, age)
+	def initialize(name, age, color)
 #Attributes will be name, age, and color.
 		@name = name
 		@age = age
-		@color = "green"
+		@color = color
+		@size = "small"
+	end
+	def name=(new_name)
+		@name = new_name
 	end
 #Give Turtle three methods.
 #One method will be hide method where turtle hides in shell.
@@ -24,7 +28,36 @@ class Turtle
 	end
 end
 
-shell = Turtle.new("Michelangelo", 2)
-shell.hide
-shell.chew("cookie")
-shell.walk
+# shell = Turtle.new("Michelangelo", 2)
+# shell.hide
+# shell.chew("cookie")
+# shell.walk
+puts "Would you like to adopt a Turtle? (Y/N)"
+answer = ""
+turtles = []
+
+until answer == "N"
+	answer = gets.chomp.upcase
+	if answer == "N"
+		turtles.each do |name, age, color|
+			puts "You have a #{color} turtle named #{name} who is #{age} years old!"
+		end
+		break
+	elsif answer == "Y"
+		turtle = Turtle.new(@name, @age, @color)
+		puts "What would you like to name your Turtle?"
+		name = gets.chomp.to_sym
+		@name = name
+		puts "How old would you like your Turtle to be?"
+		age = gets.chomp.to_i
+		@age = age
+		puts "What color do you want your Turtle to be?"
+		color = gets.chomp.to_sym
+		@color = color
+		turtles << "#{@name} #{@age} #{@color}".split(" ")
+		puts "Your turtle's name is #{@name} and it is #{@color} and #{@age} years old"
+	else
+		puts "Something is wrong!"
+	end
+	puts "Would you like to adopt another Turtle? (Y/N)"
+end
