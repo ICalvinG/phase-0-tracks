@@ -20,7 +20,7 @@ Release 2:
 			6|Hulk|Superhuman Strength|true|1962|1|1|Marvel
 			7|Superman|Superhuman Strength/Flight|false|1938|2|2|DC
 			8|Ares|God of War|false|1966|1|1|Marvel
-4. Command: SELECT supeheroes.name, universe.name FROM superheroes JOIN universe ON superheroes.universe_id = universe.id;
+4. Command: SELECT superheroes.name, universe.name FROM superheroes JOIN universe ON superheroes.universe_id = universe.id;
 	Output: Flash|DC
 			Silver Surfer|Marvel
 			Batman|DC
@@ -37,3 +37,22 @@ Release 2:
 			5|Wonder Woman|Superhuman Strength|true|1941|2
 			6|Hulk|Superhuman Strength|true|1962|1
 			7|Superman|Superhuman Strength/Flight|false|1938|2
+RELEASE 3:
+Command: SELECT superheroes.name, power, universe.name FROM superheroes CROSS JOIN ON superheroes.universe_id = universe.id;
+ Output: Flash|Super Speed|DC
+		 Silver Surfer|Power Cosmic|Marvel
+		 Batman|Genius|DC
+		 Ironman|Genius/Armor|Marvel
+		 Wonder Woman|Superhuman Strength|DC
+		 Hulk|Superhuman Strength|Marvel
+		 Superman|Superhuman Strength|DC
+Command: SELECT * FROM superheroes INNER JOIN universe ON superheroes.debut_year = universe.debut_year;
+ Output: 3|Batman|Genius|true|1939|2|1|Marvel|1939
+Command: SELECT * FROM superheroes LEFT OUTER JOIN universe ON superheroes.name = universe.name WHERE universe.id IS null;
+ Output: 1|Flash|Super Speed|true|1940|2|||
+		 2|Silver Surfer|Power Cosmic|false|1966|1|||
+		 3|Batman|Genius|true|1939|2|||
+		 4|Iron Man|Genius/Armor|true|1963|1|||
+		 5|Wonder Woman|Superhuman Strength|true|1941|2|||
+		 6|Hulk|Superhuman Strength|true|1962|1|||
+	     7|Superman|Superhuman Strength/Flight|false|1938|2|||
