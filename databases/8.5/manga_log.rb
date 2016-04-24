@@ -25,24 +25,24 @@ def add_manga(db, name, volumes, read, rating)
 	db.execute("INSERT INTO manga (name, volumes, read, rating) VALUES (?, ?, ?, ?)", [name, volumes, read, rating])
 end
 # Create a method to delete a manga
-def delete_manga(db, name)
-	db.execute("DELETE FROM manga WHERE name=?", [name])
+def delete_manga(db, id)
+	db.execute("DELETE FROM manga WHERE id=?", [id])
 end
 # Create a method to update name
 def update_name(db, name)
-	db.execute("UPDATE manga SET name=? WHERE name=?", [name])
+	db.execute("UPDATE manga SET name=? WHERE id=?", [name])
 end
 # Create a method to update volumes
 def update_volumes(db, name, volumes)
-	db.execute("UPDATE manga SET volumes=? WHERE name=?", [volumes, name])
+	db.execute("UPDATE manga SET volumes=? WHERE id=?", [volumes, name])
 end
 # Create a method to update read
 def update_read(db, name, read)
-	db.execute("UPDATE manga SET read=? WHERE name=?", [read, name])
+	db.execute("UPDATE manga SET read=? WHERE id=?", [read, name])
 end
 # Create a method to update rating
 def update_rating(db, name, rating)
-	db.execute("UPDATE manga SET rating=? WHERE name=?", [rating, name])
+	db.execute("UPDATE manga SET rating=? WHERE id=?", [rating, name])
 end
 # Create a method to print current log to the user
 def print_manga_log(db)
@@ -61,3 +61,59 @@ end
 # Create user input loop
 puts "Hello and welcome to your very own Manga Log database. Here you will be able to add a manga that you have read with it's amount of volumes, if you finished reading, and what your rating will be. Here is your current Manga Log:"
 print_manga_log(manga_db)
+loop do
+puts "Would you like to add, update or delete your Manga Log? Type in done if finished."
+answer = gets.chomp.downcase
+
+	break if answer == "done"
+
+	if answer == "add"
+		puts "What is the name of the manga?"
+		name = gets.chomp
+		puts "How many volumes are in this manga?"
+		volumes = gets.chomp.to_i
+		puts "Have you finished reading this manga?"
+		finished = gets.chomp.downcase
+			if finished == "no"
+				read = "false"
+			else
+				read = "true"
+			end
+		puts "What is your rating for this manga (Lowest 1-10 Highest)?"
+		rating = gets.chomp.to_i
+		add_manga(manga_db, name, volumes, read, rating)
+	elsif answer == "update"
+		puts "What manga would you like to update? (Enter id number)"
+		id = gets.chomp.to_i
+		puts "What would you like to update about this manga (name, volumes, read, rating)?"
+		input = gets.chomp.downcase
+			if input == "name"
+				puts "What is the new name for this manga?"
+				name = gets.chomp.downcase
+				update_name(manga_db, name)
+			elsif input == "volumes"
+				puts "What is the new number of volumes for this manga?"
+				volumes = gets.chomp.to_i
+				update_volumes(manga_db, name, volumes)
+			elsif input == "read"
+				puts "Have you finished this manga?"
+				finished = gets.chomp.downcase
+					if finished == "no"
+						read = "false"
+					else
+						read = "true"
+					end
+				update_read(manga_db, name, read)
+			elsif input == "rating"
+				puts "What is the new rating for this manga?"
+				rating = gets.chomp.to_i
+				update_rating(manga_db, name, rating)
+			end
+	elsif answer == "delete"
+		puts "What manga would you like to delete? (Enter id number)"
+		id = gets.chomp.to_i
+		delete_manga(manga_db, id) 
+	end
+	puts "Here is your current Manga Log:"
+	print_manga_log(manga_db)
+end
