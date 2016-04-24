@@ -29,20 +29,20 @@ def delete_manga(db, id)
 	db.execute("DELETE FROM manga WHERE id=?", [id])
 end
 # Create a method to update name
-def update_name(db, name)
-	db.execute("UPDATE manga SET name=? WHERE id=?", [name])
+def update_name(db, name, id)
+	db.execute("UPDATE manga SET name=? WHERE id=?", [name, id])
 end
 # Create a method to update volumes
-def update_volumes(db, name, volumes)
-	db.execute("UPDATE manga SET volumes=? WHERE id=?", [volumes, name])
+def update_volumes(db, volumes, id)
+	db.execute("UPDATE manga SET volumes=? WHERE id=?", [volumes, id])
 end
 # Create a method to update read
-def update_read(db, name, read)
-	db.execute("UPDATE manga SET read=? WHERE id=?", [read, name])
+def update_read(db, read, id)
+	db.execute("UPDATE manga SET read=? WHERE id=?", [read, id])
 end
 # Create a method to update rating
-def update_rating(db, name, rating)
-	db.execute("UPDATE manga SET rating=? WHERE id=?", [rating, name])
+def update_rating(db, rating, id)
+	db.execute("UPDATE manga SET rating=? WHERE id=?", [rating, id])
 end
 # Create a method to print current log to the user
 def print_manga_log(db)
@@ -89,12 +89,13 @@ answer = gets.chomp.downcase
 		input = gets.chomp.downcase
 			if input == "name"
 				puts "What is the new name for this manga?"
-				name = gets.chomp.downcase
-				update_name(manga_db, name)
+				name = gets.chomp
+				name.split.map(&:capitalize).join(" ")
+				update_name(manga_db, name, id)
 			elsif input == "volumes"
 				puts "What is the new number of volumes for this manga?"
 				volumes = gets.chomp.to_i
-				update_volumes(manga_db, name, volumes)
+				update_volumes(manga_db, volumes, id)
 			elsif input == "read"
 				puts "Have you finished this manga?"
 				finished = gets.chomp.downcase
@@ -103,11 +104,11 @@ answer = gets.chomp.downcase
 					else
 						read = "true"
 					end
-				update_read(manga_db, name, read)
+				update_read(manga_db, read, id)
 			elsif input == "rating"
 				puts "What is the new rating for this manga?"
 				rating = gets.chomp.to_i
-				update_rating(manga_db, name, rating)
+				update_rating(manga_db, rating, id)
 			end
 	elsif answer == "delete"
 		puts "What manga would you like to delete? (Enter id number)"
@@ -117,3 +118,5 @@ answer = gets.chomp.downcase
 	puts "Here is your current Manga Log:"
 	print_manga_log(manga_db)
 end
+
+puts "You have now finished viewing your Manga Log. Keep on reading and updating. Til next time!"
