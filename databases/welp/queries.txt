@@ -1,0 +1,16 @@
+Release 2
+
+2. Command: SELECT * FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON reviews.user_id = users.id;
+	Output: 1|5|Their burgers were amazing|1|1|1|Burger King|1|John|Doe
+			2|3|Their fries were too soggy|2|2|2|McDonalds|2|Jane|Doe
+			3|5|Probably the best burger I've ever had|3|3|3|Shake Shack|3|Albert|Einstein
+			4|4|The salad here does me good|4|4|4|Wendys|4|Nikola|Tesla
+			5|4|My craving for fried chicken is settled|5|5|5|Popeyes|5|Thomas|Edison
+3. Command: SELECT users.first_name, users.last_name, businesses.name, stars, comment FROM businesses, users JOIN reviews ON reviews.business_id = businesses.id and reviews.user_id = users.id;
+	Output: John|Doe|Burger King|5|Their burgers were amazing
+			Jane|Doe|McDonalds|3|Their fries were too soggy
+			Albert|Einstein|Shack Shack|5|Probably the best burger I've ever had
+			Nikola|Tesla|Wendys|4|The salad here does me good
+			Thomas|Edison|Popeyes|4|My craving for fried chicken is settled
+4. Command: SELECT * FROM businesses, reviews, users WHERE reviews.business_id = businesses.id and reviews.user_id = users.id and business_id=3;
+	Output: 3|Shake Shack|3|5|Probably the best burger I've ever had|3|3|3|Albert|Einstein
