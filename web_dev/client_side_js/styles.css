@@ -1,0 +1,57 @@
+h1 {
+	font-family: Impact;
+}
+
+h2 {
+	font-family: Impact;
+}
+
+h3 {
+	font-family: Impact;
+}
+
+ul {
+	border-style: solid;
+	padding-left: 5%;
+	background-image: url("https://secure.static.tumblr.com/fb1ce6e5c02d8d58d1f822fd43814b56/wu6rwpx/XIKncvk6z/tumblr_static_filename_640_v2.jpg");
+}
+
+table {
+	background-image: url("http://img15.deviantart.net/1bc0/i/2012/224/8/f/straw_hat_pirates_by_pepimania-d5ateyv.jpg");
+}
+
+a:visited {
+	color: red;
+}
+
+a:hover {
+	color: yellow;
+}
+
+.crew {
+	color: #ffff00;
+}
+
+.bio {
+	font-size: 20px;
+}
+
+#compare {
+	font-style: italic;
+}
+
+#flag {
+	margin: 50px 700px 50px 500px;
+}
+
+.footer {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media only screen and (max-width: 500px) {
+	#flag {
+		display: none;
+	}
+}
