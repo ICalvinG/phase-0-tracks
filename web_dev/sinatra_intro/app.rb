@@ -51,9 +51,26 @@ end
 
 get '/great_job' do
   name = params[:name]
-  if name 
-    "Good job, #{:name}!"
+  if name
+    "Good job, #{name}!"
   else
     "Good job!"
   end
+end
+
+get '/:first/add/:second' do
+  first = params[:first]
+  second = params[:second]
+  total = first.to_i + second.to_i
+  "#{first} + #{second} = #{total}"
+end
+
+get '/students/campus/:campus' do
+  students = db.execute("SELECT * FROM students WHERE campus=?", [params[:campus]])
+  response = ""
+  students.each do |student|
+    response << "Name: #{student['name']}<br>"
+    response << "Campus: #{student['campus']}<br><br>"
+  end
+  "Here are the students in this campus:" << response
 end
